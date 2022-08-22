@@ -1,7 +1,7 @@
 <h1>Sprint 02 - Python</h1>
 <p>Diretório referente a entrega das atividades.</p>
 <h3>Listas de exercicios</h3>
-<a href="\lista-de-exercicios\lista-01-01\Lista_01-Parte_01.ipynb">Lista 01 - Parte 01</a></br>
+<a href="\lista-de-exercicios\lista-01-01\Lista_01-Parte_01.ipynb">Lista 01 - Parte 01</a>
 </br>
 <h3>Diretório de estudos:</h3>
 <a href="https://github.com/annekarolinefc/python">Diretório de Python</a>
@@ -20,7 +20,7 @@ Escreva um código Python que lê do teclado o nome e a idade de um usuário e i
 usuário completará 100 anos.
 Dica: você pode ler strings digitadas no teclado utilizando a função builtin input('mensagem'). Lembre-se de converter números para seu respectivo tipo (int ou float) antes fazer operações aritméticas.
 
-```sh
+```py
 import datetime
 
 current_time = datetime.datetime.now()
@@ -36,7 +36,7 @@ print(f'{nome} irá completar 100 anos em {ano}.')
 ## Exercício 2
 Escreva um código Python que lê do teclado um número digitado pelo usuário e imprime se ele par ou ímpar
 
-```sh
+```py
 numero = float(input('Digite um numero: '))
 if (numero%2==0):
   print(f'{numero} é par.')
@@ -50,7 +50,7 @@ else :
 Escreva um código Python que imprime os números pares de 0 até 20 (incluso).
 Dica: olhe a documentação da função range(). Mais informações no link
 
-```sh
+```py
 for numeros in range(0,21, 2):
   print(numeros)
 ```
@@ -60,7 +60,7 @@ for numeros in range(0,21, 2):
 ## Exercício 4
 Escreva um código Python que imprime todos os números primos de 0 até 100.
 
-```sh
+```py
 for numero in range(2, 101):
     for count in range(2, numero):
         if (numero%count) == 0: #o numero possui um divisor sem ser 1 e ele mesmo.
@@ -73,7 +73,7 @@ for numero in range(2, 101):
 
 ## Exercício 5
 
-```sh
+```py
 dia = input('Insira o dia: ')
 
 mes = int(input('Insira o mês: '))
