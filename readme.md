@@ -1,14 +1,11 @@
 <h1>Sprint 02 - Python</h1>
-<h2>Links</h2>
-<h3>Cursos realizados:</h3>
-<a href="/cursos/python-para-data-science">Curso Python para Data Science</a></br>
-<a href="/cursos/python-comecando-com-a-linguagem">Curso Python: começando com a linguagem</a></br>
+<p>Diretório referente a entrega das atividades.</p></br>
 <h3>Listas de exercicios</h3>
-<a href="/listas-de-exercicios/lista-01/Lista_01-Parte_01.ipynb">Lista 01 - Parte 01</a></br>
+<a href="/lista-de-exercicios-lista-01-01/Lista_01-Parte_01.ipynb">Lista 01 - Parte 01</a></br>
 </br>
 
 <h3>Sumário</h3>
-<a href=#parte1>Parte 01<a>
+<a href=#parte1>Exercícios – Parte 1<a>
 
 <div id="parte1"></div>
 
