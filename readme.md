@@ -1,11 +1,15 @@
 <h1>Sprint 02 - Python</h1>
-<p>Diretório referente a entrega das atividades.</p></br>
+<p>Diretório referente a entrega das atividades.</p>
 <h3>Listas de exercicios</h3>
 <a href="\lista-de-exercicios\lista-01-01\Lista_01-Parte_01.ipynb">Lista 01 - Parte 01</a></br>
-
-
+</br>
+<h3>Diretório de estudos:</h3>
+<a href="https://github.com/annekarolinefc/python">Diretório de Python</a>
+</br>
 <h3>Sumário</h3>
 <a href=#parte1>Exercícios – Parte 1<a>
+</br>
+</br>
 
 <div id="parte1"></div>
 
