@@ -278,7 +278,40 @@ with open('./person.json', 'r') as arquivoJson:
     print(type(arquivoJsonDumped))
 ```
 ## Exercício 08
+Implemente a função my_map(list, f) que recebe uma lista como primeiro argumento e uma função como segundo argumento. Esta função aplica a função recebida para cada elemento da lista recebida retorna o resultado em uma nova lista. Teste sua função para saber se está ok
 ```py
+def my_map(list,f):
+    nova_lista=[]
+    
+    for elemento in list:
+        resultado = f()
+        nova_lista.append(resultado)
+    return nova_lista  
+```
+Teste manual:
+```py
+def default_valor2():
+    return 2
+
+def default_valor3():
+    return 3
+
+lista = [1, 2, 3, 4]
+print(my_map(lista, default_valor2))
+print(my_map(lista, default_valor3))
+```
+Teste unitário:
+```py
+import unittest
+class Testa_funcao_my_map(unittest.TestCase):
+    def test_default_2(self):
+        self.assertEqual(my_map([1, 2, 3, 4], default_valor2), [2, 2, 2, 2])
+    def test_default_3_int(self):
+        self.assertEqual(my_map([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], default_valor3), [3, 3, 3, 3, 3, 3, 3, 3, 3, 3])
+    def test_default_3_str(self):
+        self.assertEqual(my_map(['a', 'b', 'c', 'd', 'e'], default_valor3), [3, 3, 3, 3, 3])
+    
+unittest.main(argv=[''], verbosity=2, exit=False)
 ```
 ## Exercício 09
 ```py
