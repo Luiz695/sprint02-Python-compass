@@ -196,7 +196,53 @@ while True:
         print("Erro na aplicação. A aplicação será finalizada.")
         break
 ```
+## Exercício 04
+Dada as listas a seguir:
+primeirosNomes = ['Joao', 'Douglas', 'Lucas', 'José']
+sobreNomes = ['Soares', 'Souza', 'Silveira', 'Pedreira']
+idades = [19, 28, 25, 31]
+Faça um programa que imprima os dados na seguinte estrutura: " - está com anos"
 
+Resolução utilizando loop
+```py
+primeirosNomes, sobrenomes, idades = ['Joao', 'Douglas', 'Lucas', 'José'], ['Soares', 'Souza', 'Silveira', 'Pedreira'], [19, 28, 25, 31]
+
+x=0
+while x<len(idades):
+    print(f'{primeirosNomes[x]} {sobrenomes[x]} está com {idades[x]} anos.')
+    x+=1
+```
+Resolução utilizando iteração e zip()
+```py
+primeirosNomes, sobrenomes, idades = ['Joao', 'Douglas', 'Lucas', 'José'], ['Soares', 'Souza', 'Silveira', 'Pedreira'], [19, 28, 25, 31]
+for primeirosNomes, sobrenomes, idades in zip(primeirosNomes, sobrenomes, idades):
+    print(f'{primeirosNomes} {sobrenomes} está com {idades} anos.')
+```
+
+## Exercício 05
+```py
+```
+## Exercício 06
+```py
+```
+## Exercício 07
+```py
+```
+## Exercício 08
+```py
+```
+## Exercício 09
+```py
+```
+
+```py
+```
+
+```py
+```
+
+```py
+```
 
 <div id="parte3"></div>
 
