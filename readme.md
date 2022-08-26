@@ -513,8 +513,46 @@ print('Array: \n', array, '\n Forma do array (linhas, colunas):', array.shape, '
 print('Array 5 x 5: \n', new_array, '\n Forma do array (linhas, colunas): ', new_array.shape, '\n')
 print('Diagonal do Array: \n', diagonal, '\n')
 print('Soma dos elementos da diagonal: ', np.sum(diagonal)) 
-#print('Soma dos elementos da diagonal: ', np.trace(new_array)) # Uma outra opção seria: np.trace(new_array)
 ```
+ou
+```py
+array = np.arange(1,26).reshape(5,5)
+soma_diagonal = np.trace(array)
+print('Array 5 x 5: \n', array, '\n Forma do array (linhas, colunas): ', array.shape, '\n')
+print('Soma dos elementos da diagonal: ', soma_diagonal)
+```
+## Exercício 02
+```py
+```
+## Exercício 03
+```py
+```
+## Exercício 04
+```py
+```
+## Exercício 05
+```py
+```
+## Exercício 06
+```py
+```
+## Exercício 07
+```py
+```
+## Exercício 08
+```py
+```
+## Exercício 09
+```py
+```
+
+
+
+
+
+
+
+
 
 <p>Devido ao formato dos arquivos, a lista 02 será apresentada através do documento abaixo:</p>
 <a href="\lista-de-exercicios\lista-02\Lista_02.ipnb">Lista 02</a>
