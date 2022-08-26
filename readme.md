@@ -603,7 +603,21 @@ print('Produto dos Arrays Numpy: \n', array_3, '\n', 'Forma do array: ', array_3
 <br>
 
 ## Exercício 05
+Dado o array abaixo, converta-o para um array do tipo int32.
+
+• np.arange(9, dtype=np.float32).reshape(3, 3)
 ```py
+import numpy as np
+
+array = np.arange(9, dtype=np.float32).reshape(3, 3)
+print('Array Numpy: \n', array, '\n')
+print('Tipo de dado do Array: ', array.dtype, '\n')
+
+print('List: \n', array.tolist(), '\n')
+list_to_array = np.array(array.tolist(), dtype=np.int32)
+print('Array Numpy convertido: \n', list_to_array, '\n')
+print('Tipo de dado do Array Convertido: ', list_to_array.dtype)
+
 ```
 <br>
 
