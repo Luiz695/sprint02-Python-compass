@@ -684,7 +684,16 @@ print("A soma dos elementos das duas diagonais é: ", soma_diagonal)
 <br>
 
 ## Exercício 09
+Dado o array abaixo, selecione os valores Pares e todos os valores maiores que 8, seu código não deve conter nenhum tipo de loop (for / while):
+
+• np.arange(25).reshape(5, 5)
 ```py
+import numpy as np
+
+array = np.arange(25).reshape(5, 5)
+new_array = array[(array%2==0)&(array>8)]
+print('Array Numpy: \n', array, '\n')
+print('Seleção de valores pares e valores > 8 do Array Numpy: \n', new_array, '\n')
 ```
 
 
