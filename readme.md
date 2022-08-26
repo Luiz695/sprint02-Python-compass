@@ -453,7 +453,33 @@ print('Lista: ', c)
 ```
 
 ## Exercício 14
+Calcule o valor mínimo, valor máximo, valor médio e a mediana da lista gerada na célula abaixo:
+Obs.: Lembrem-se, para calcular a mediana a lista deve estar ordenada!
+
 ```py
+import random
+#lista = [2, 4, 2, 2, 2, 8, 2, 2, 2, 4] de teste durante a implementação
+lista = random.sample(range(500),50)
+print('Lista Informada: ', lista, '\n')
+valor_minimo = min(lista)
+valor_maximo = max(lista)
+valor_medio = (sum(lista)/len(lista))
+
+lista_ordenada = sorted(lista)
+print("Lista ordenada: ", lista_ordenada, '\n')
+ 
+if(len(lista_ordenada)%2)==0:
+    med1 = lista[len(lista_ordenada)//2]
+    med2 = lista[len(lista_ordenada)//2 + 1]
+    mediana = (med1+med2)/2
+else:
+    posicao = len(lista_ordenada)//2
+    mediana = lista_ordenada[posicao]
+
+print("Valor minimo: ", valor_minimo)
+print("Valor máximo: ", valor_maximo)
+print("Valor médio: ", valor_medio)
+print("Valor mediana: ", mediana)
 ```
 
 ## Exercício 15
