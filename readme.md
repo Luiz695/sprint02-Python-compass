@@ -326,13 +326,55 @@ def function(*args, **kwargs):
         
 function('1', 2, True, ['b', 'c'], 6.3, y=7.8, param1=10, param2='hello')
 ```
+## Exercício 10
+Implemente a classe Lampada. A classe Lâmpada recebe um booleano no seu construtor, True se a lâmpada
+estiver ligada, False caso esteja desligada. 
+A classe Lampada possuí os seguintes métodos:
+• liga(): muda o estado da lâmpada para ligada
+• desliga(): muda o estado da lâmpada para desligada
+• esta_ligada(): retorna verdadeiro se a lâmpada estiver ligada, falso caso contrário
+```py
+class Lampada(object):
+    #construtor
+    def __init__(self, ligada = False, status='Lâmpada desligada.'):
+        self.ligada = ligada
+        self.status = status
+        
+    def liga(self):
+        if self.ligada == True: 
+            print("Lâmpada já se encontra ligada.\n")
+        else: 
+            self.ligada = True 
+            self.status = 'Lâmpada ligada.'
+            return print('Lâmpada ligada com sucesso. \n') 
+      
+    def desliga(self):
+        if self.ligada == False: 
+            print("Lâmpada já se encontra desligada.\n")
+        else:
+            self.ligada = False 
+            self.status = 'Lâmpada desligada'
+            return print('Lâmpada desligada com sucesso. \n') 
+      
+    def esta_ligada(self):
+       print(f'Status da Lâmpada: {self.status} \nLigada: {self.ligada} \n')
+```
 
+## Exercício 11
+```py
+```
+## Exercício 12
+```py
+```
+## Exercício 13
 ```py
 ```
 
+## Exercício 14
 ```py
 ```
 
+## Exercício 15
 ```py
 ```
 
