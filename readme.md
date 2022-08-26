@@ -248,8 +248,14 @@ class TestNovaLista(unittest.TestCase):
 unittest.main(argv=[''], verbosity=2, exit=False)
 ```
 ## Exercício 06
+Escreva um programa que lê o conteúdo do arquivo texto arquivo_texto.txt e imprime o seu conteúdo.
+Dica: leia documentação da função open(...), link: https://docs.python.org/3/library/functions.html#open
 
 ```py
+arquivo = open('arquivo_texto.txt', 'r')
+for line in arquivo.readlines():
+    print(line) 
+arquivo.close()
 ```
 ## Exercício 07
 ```py
