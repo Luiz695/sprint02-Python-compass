@@ -2,18 +2,22 @@
 <p>Diretório referente a entrega das atividades.</p>
 <h3>Listas de exercicios</h3>
 <a href="\lista-de-exercicios\lista-01-01\Lista_01-Parte_01.ipynb">Lista 01 - Parte 01</a>
+<a href="\lista-de-exercicios\lista-01-02\Lista_01-Parte_02.ipynb">Lista 01 - Parte 02</a>
+<a href="\lista-de-exercicios\lista-02\Lista_02.ipnb">Lista 02</a>
 </br>
 <h3>Diretório de estudos:</h3>
 <a href="https://github.com/annekarolinefc/python">Diretório de Python</a>
 </br>
 <h3>Sumário</h3>
-<a href=#parte1>Exercícios – Parte 1<a>
+<a href=#parte1>Exercícios - Lista 01 – Parte 1</a>
+<a href=#parte3>Exercícios - Lista 01 – Parte 2</a>
+<a href=#parte2>Exercícios - Lista 02</a>
 </br>
 </br>
 
 <div id="parte1"></div>
 
-# Exercícios – Parte 1
+# Exercícios - Lista 01 – Parte 1
 
 ## Exercício 1
 Escreva um código Python que lê do teclado o nome e a idade de um usuário e imprime o ano em que o
@@ -22,14 +26,18 @@ Dica: você pode ler strings digitadas no teclado utilizando a função builtin 
 
 ```py
 import datetime
-
-current_time = datetime.datetime.now()
-ano_atual = current_time.year
-
-nome = input('Insira seu nome: ')
-idade = int(input('Insira usa idade: '))
-ano = 100-idade+2022;
-print(f'{nome} irá completar 100 anos em {ano}.')
+on = True
+while (on): 
+    try:
+        current_time = datetime.datetime.now()
+        current_time_1 = current_time.year
+        name = input('Insira seu nome: ')
+        age = int(input('Insira usa idade: '))
+        year = 100-age+current_time_1;
+        print(f'{name} irá completar 100 anos em {year}.')
+        on=False
+    except ValueError:
+        print('Valor digitado é invalido')
 ```
 </br>
 
@@ -87,3 +95,13 @@ if qtd_caracteres_ano<4:
     
 print("{:0>2}/{:0>2}/{}".format(dia, mes, ano))
 ```
+
+<div id="parte2"></div>
+
+# Exercícios - Lista 01  – Parte 2
+
+<div id="parte3"></div>
+
+# Exercícios - Lista 02 
+<p>Devido ao formato dos arquivos, a lista 02 será apresentada através do documento abaixo:</p>
+<a href="\lista-de-exercicios\lista-02\Lista_02.ipnb">Lista 02</a>
