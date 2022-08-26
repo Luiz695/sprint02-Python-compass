@@ -148,15 +148,24 @@ a, b = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1
 c = set(a).intersection(set(b))
 print('Elementos em comum sem repetição: ', list(c))
 ```
-
+## Exercício 2
+Resolução utilizando iteração:
 ```py
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+lista_numeros_impares = []
 
+for x in a:
+    if (x%2!=0):
+        lista_numeros_impares.append(x)
+        
+print(lista_numeros_impares)
 ```
-
+Resolução utilizando List Comprehesion
 ```py
-
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+[x for x in a if x % 2 !=0 ]
 ```
-
+## Exercício 3
 ```py
 
 ```
