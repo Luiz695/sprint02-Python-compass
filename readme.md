@@ -586,8 +586,20 @@ print('Substituindo valores: \n', array )
 <br>
 
 ## Exercício 04
+A partir das arrays abaixo, caso seja possível, realize o produto das mesmas:
+• np.random.uniform(size=(5, 3))
+• np.random.uniform(size=(3, 4))
 ```py
+import numpy as np
+
+array_1 = np.random.uniform(size=(5, 3)) # m x n
+array_2 = np.random.uniform(size=(3, 4)) # n x p
+array_3 = array_1.dot(array_2) # M1.dot(M2) | M1 @ M2 
+print('Array Numpy 01: \n', array_1, '\n')
+print('Array Numpy 02: \n', array_2, '\n')
+print('Produto dos Arrays Numpy: \n', array_3, '\n', 'Forma do array: ', array_3.shape, '\n')
 ```
+
 <br>
 
 ## Exercício 05
