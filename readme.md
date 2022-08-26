@@ -383,7 +383,57 @@ while True:
         on = True
 ```
 ## Exercício 12
+Escreve uma função que recebe como parâmetro uma lista e retorna 3 listas: a lista recebida dividida em 3
+partes iguais. Teste sua implementação
+
+b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 ```py
+import time
+def divide_lista(lista):
+    primeira_posicao = lista[0]
+    ultima_posicao = len(lista)
+    qtd_elementos = len(lista)
+    qtd_lista = (qtd_elementos//3)   
+    a, b, c = [], [], []
+    
+    print('\nEste programa realiza a divisão da lista informada em 3 partes iguais. \nCaso a lista informada não gere listas de mesmo tamanho, sera adicionado um 0 ao final da lista até ser possível realizar a divisão.')
+    print('Dividindo a lista...')
+    time.sleep(5)
+    
+    for el in lista:
+        #a = lista[:qtd_lista]
+        a = lista[:qtd_elementos//3]
+        b = lista[qtd_lista: (2*qtd_lista)]
+        c = lista[(2*qtd_lista):qtd_elementos]
+    if len(a)==len(b) and len(b)==len(c):
+        print('Lista dividida com sucesso!\n\nListas:')
+        #return f'{a}, {b}, {c}'
+        return a, b, c
+    else: # len(lista)%3 != 0
+        print("\nNão foi possível realizar a divisão da lista em 3 listas de tamanhos iguais.")
+        print("Chamando a função novamente...")
+        print("Acrescentando um zero na lista...")
+        lista.append(0)
+        print("Nova lista: ", lista)
+        time.sleep(2)
+        return (divide_lista(lista))
+```
+
+Teste manual:
+```py
+lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+#lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16]
+#lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 18]
+print(divide_lista(lista))
+```
+Teste unitário:
+```py
+import unittest
+class Testa_funcao_Divide_Lista(unittest.TestCase):
+    def testFuncaoDivide(self):
+        self.assertEqual(divide_lista([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]), ([1, 2, 3, 4, 5 ],[ 6, 7, 8, 9, 10], [11, 12, 13, 0, 0]))
+    
+unittest.main(argv=[''], verbosity=2, exit=False)
 ```
 ## Exercício 13
 ```py
