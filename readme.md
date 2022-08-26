@@ -637,7 +637,19 @@ print("Última coluna do Array após a soma: \n", soma_ultima_coluna)
 <br>
 
 ## Exercício 07
+Dados os dois arrays 2x4 abaixo, empilhe ambos formando um novo array 4x4.
+• np.array([[0,3,4,5], [7, 10, 9, 2]])
+• np.array([[1,4,9,12], [15, 22, 19, 17]])
+
 ```py
+import numpy as np
+
+array_01 = np.array([[0,3,4,5], [7, 10, 9, 2]])
+array_02 = np.array([[1,4,9,12], [15, 22, 19, 17]])
+array_03 = np.concatenate((array_01, array_02))
+print('Array Numpy 01: \n', array_01, '\n', 'Forma do array numpy (linhas, colunas): \n', array_01.shape, '\n')
+print('Array Numpy 02: \n', array_02, '\n', 'Forma do array numpy (linhas, colunas): \n', array_02.shape, '\n')
+print('New Array Numpy: \n', array_03, '\n', 'Forma do array numpy (linhas, colunas): \n', array_03.shape)
 ```
 <br>
 
