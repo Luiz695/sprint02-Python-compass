@@ -45,11 +45,28 @@ while (on):
 Escreva um código Python que lê do teclado um número digitado pelo usuário e imprime se ele par ou ímpar
 
 ```py
-numero = float(input('Digite um numero: '))
-if (numero%2==0):
-  print(f'{numero} é par.')
-else :
-  print(f'{numero} é impar.')
+funcionando = True
+while (funcionando):
+    try:
+        numero = float(input('Digite um numero: '))
+        if (numero%2==0):
+            print(f'{numero} é par.')
+            x = input('Deseja realizar uma nova busca: S/N')
+            if (x.upper() == 'S'):
+                funcionando = True 
+                continue
+            else:
+                funcionando = False
+        else :
+            print(f'{numero} é impar.')
+            x = input('Deseja realizar uma nova busca: S/N')
+            if (x.upper() == 'S'): 
+                funcionando = True
+                continue
+            else:
+                funcionando = False
+    except ValueError:
+        print('Erro na execução. Informe um valor válido.')
 ```
 
 <br>
