@@ -654,7 +654,32 @@ print('New Array Numpy: \n', array_03, '\n', 'Forma do array numpy (linhas, colu
 <br>
 
 ## Exercício 08
+Dado o array definido por np.arange(25).reshape(5, 5), realize as seguintes operações sem utilizar nenhum tipo de loop (for / while):
+• A média das linhas 0, 2 e 3.
+• A média das colunas 0, 1 e 4.
+• A soma dos elementos das duas diagonais.
 ```py
+import numpy as np
+
+array = np.arange(25).reshape(5, 5)
+media_linhas = np.mean(array, axis = 1)
+
+print('Média das linhas: ', np.mean(array))
+print('Média de cada linha: ', array.mean(axis=1) )
+print('Média da linha 0: ',  np.mean(array[0,:]))
+print('Média da linha 2: ',  np.mean(array[2,:]))
+print('Média da linha 3: ',  np.mean(array[3,:]), '\n')
+
+print('Média das colunas: ', np.mean(array.mean(axis=0)))
+print('Média de cada coluna: ', array.mean(axis=0) )
+print('Média da coluna 0: ', np.mean(array[:,0]))
+print('Média da coluna 1: ', np.mean(array[:,1]))
+print('Média da coluna 4: ', np.mean(array[:,4]), '\n')
+
+diagonal = np.trace(array)
+diagonal2 = np.trace(array, axis2=1) # eixo
+soma_diagonal = diagonal+diagonal2
+print("A soma dos elementos das duas diagonais é: ", soma_diagonal)
 ```
 <br>
 
