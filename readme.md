@@ -456,30 +456,30 @@ print('Lista: ', c)
 Calcule o valor mínimo, valor máximo, valor médio e a mediana da lista gerada na célula abaixo:
 Obs.: Lembrem-se, para calcular a mediana a lista deve estar ordenada!
 
+Usando o modulo statistics para o cálculo da mediana:
+
 ```py
 import random
-#lista = [2, 4, 2, 2, 2, 8, 2, 2, 2, 4] de teste durante a implementação
+import statistics
+
 lista = random.sample(range(500),50)
 print('Lista Informada: ', lista, '\n')
-valor_minimo = min(lista)
-valor_maximo = max(lista)
-valor_medio = (sum(lista)/len(lista))
+print("Valor minimo: ",  min(lista))
+print("Valor máximo: ", max(lista))
+print("Valor médio: ", (sum(lista)/len(lista)))
+print("Valor mediana: ", statistics.median(lista))
+```
+Resolução utilizando numPy:
+```py
+import numpy as np 
 
-lista_ordenada = sorted(lista)
-print("Lista ordenada: ", lista_ordenada, '\n')
- 
-if(len(lista_ordenada)%2)==0:
-    med1 = lista[len(lista_ordenada)//2]
-    med2 = lista[len(lista_ordenada)//2 + 1]
-    mediana = (med1+med2)/2
-else:
-    posicao = len(lista_ordenada)//2
-    mediana = lista_ordenada[posicao]
-
-print("Valor minimo: ", valor_minimo)
-print("Valor máximo: ", valor_maximo)
-print("Valor médio: ", valor_medio)
-print("Valor mediana: ", mediana)
+lista = random.sample(range(500),50)
+array = np.array(lista)
+print('Array: ', array)
+print('Valor mínimo: ', np.min(array))
+print('Valor máximo: ', np.max(array))
+print('Valor médio: ', np.mean(array))
+print('Valor mediana: ', np.median(array))
 ```
 
 ## Exercício 15
@@ -496,8 +496,25 @@ a.reverse()
 print(a)
 ```
 
+
 <div id="parte3"></div>
 
-# Exercícios - Lista 02 
+# Exercícios - Lista 02 - numPy
+
+## Exercício 01
+```py
+import numpy as np
+
+array = np.array(range(1,26))
+new_array= array.reshape((5, 5))
+diagonal = np.diagonal(new_array)
+
+print('Array: \n', array, '\n Forma do array (linhas, colunas):', array.shape, '\n')
+print('Array 5 x 5: \n', new_array, '\n Forma do array (linhas, colunas): ', new_array.shape, '\n')
+print('Diagonal do Array: \n', diagonal, '\n')
+print('Soma dos elementos da diagonal: ', np.sum(diagonal)) 
+#print('Soma dos elementos da diagonal: ', np.trace(new_array)) # Uma outra opção seria: np.trace(new_array)
+```
+
 <p>Devido ao formato dos arquivos, a lista 02 será apresentada através do documento abaixo:</p>
 <a href="\lista-de-exercicios\lista-02\Lista_02.ipnb">Lista 02</a>
