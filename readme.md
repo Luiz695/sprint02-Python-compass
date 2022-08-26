@@ -604,7 +604,6 @@ print('Produto dos Arrays Numpy: \n', array_3, '\n', 'Forma do array: ', array_3
 
 ## Exercício 05
 Dado o array abaixo, converta-o para um array do tipo int32.
-
 • np.arange(9, dtype=np.float32).reshape(3, 3)
 ```py
 import numpy as np
@@ -622,7 +621,18 @@ print('Tipo de dado do Array Convertido: ', list_to_array.dtype)
 <br>
 
 ## Exercício 06
+Dado o array abaixo, some 10 em todos os elementos da última coluna.
+• np.random.uniform(size=(8, 8))
 ```py
+import numpy as np
+
+array = np.random.uniform(size=(8, 8))
+ultima_coluna = array[:,7]
+soma_ultima_coluna = (array[:,7]+10)
+remove_coluna = np.delete(array, 7, 1)
+print('Array Numpy: \n', array, '\n')
+print("Última coluna do Array antes da soma: \n", ultima_coluna, '\n')
+print("Última coluna do Array após a soma: \n", soma_ultima_coluna)
 ```
 <br>
 
