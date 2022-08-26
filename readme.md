@@ -88,8 +88,8 @@ Escreva um código Python que imprime todos os números primos de 0 até 100.
 ```py
 for numero in range(2, 101):
     for count in range(2, numero):
-        if (numero%count) == 0: #o numero possui um divisor sem ser 1 e ele mesmo.
-            break # encerra o laço
+        if (numero%count) == 0: 
+            break 
     else:
         print(f'{numero} é primo')
 ```
@@ -99,18 +99,25 @@ for numero in range(2, 101):
 ## Exercício 5
 
 ```py
-dia = input('Insira o dia: ')
+on = True
+while True:
+    try:
+        dia = int(input('Insira o dia: '))
 
-mes = int(input('Insira o mês: '))
-if mes >= 13:
-    mes = input('Valor incorreto. Insira novamente o mês: ')
-    
-ano = input('Insira o ano com quatro digitos: ')
-qtd_caracteres_ano = len(ano)
-if qtd_caracteres_ano<4:
-    ano = input('Insira novamente o ano com quatro digitos: ')
-    
-print("{:0>2}/{:0>2}/{}".format(dia, mes, ano))
+        mes = int(input('Insira o mês: '))
+        if mes >= 13:
+            mes = input('Valor incorreto. Insira novamente o mês: ')  
+        ano = input('Insira o ano com quatro digitos: ')
+        qtd_caracteres_ano = len(ano)
+        if qtd_caracteres_ano<4:
+            ano = input('Insira novamente o ano com quatro digitos: ')
+        print("{:0>2}/{:0>2}/{}".format(dia, mes, ano))
+        on = False
+        break    
+    except:
+        on = False
+        on = True
+        print("Valor informado é inválido. Reiniciando a aplicação...")
 ```
 
 <div id="parte2"></div>
