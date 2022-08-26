@@ -220,9 +220,35 @@ for primeirosNomes, sobrenomes, idades in zip(primeirosNomes, sobrenomes, idades
 ```
 
 ## Exercício 05
+Escreva uma função que recebe uma lista e retorna uma nova lista sem elementos duplicados. Utilize um
+exemplo para testar sua função
 ```py
+def nova_lista(lista):    
+    lista_conjunto = set(lista)
+    nova_lista_conjunto = lista_conjunto
+    
+    nova_lista = list(nova_lista_conjunto)              
+    return nova_lista
+```
+Teste manual:
+```py
+lista = [1, 1, 2, 3, 4]
+print('Lista original:', lista)
+print('Nova Lista:', nova_lista(lista))
+```
+Teste unitário para testar a função implementada:
+```py
+import unittest
+
+class TestNovaLista(unittest.TestCase):
+    def nova_lista_test(self, lista):
+        listaTeste = [1, 1, 2, 3, 4]
+        self.assertTrue(listaTeste==lista) 
+    
+unittest.main(argv=[''], verbosity=2, exit=False)
 ```
 ## Exercício 06
+
 ```py
 ```
 ## Exercício 07
