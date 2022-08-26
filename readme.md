@@ -123,6 +123,44 @@ while True:
 <div id="parte2"></div>
 
 # Exercícios - Lista 01  – Parte 2
+## Exercício 1
+
+Resolução utilizando listas:
+```py
+a, b = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+elementos_em_comum, elementos_em_comum_sem_repeticao = [], []
+
+for elem_a in a:
+    for elem_b in b:
+        if elem_a==elem_b:
+            elementos_em_comum.append(elem_a)
+
+for el in elementos_em_comum:
+    if el not in elementos_em_comum_sem_repeticao:
+        elementos_em_comum_sem_repeticao.append(el)
+        
+print('Elementos em comum', elementos_em_comum)
+print('Elementos em comum sem repetição: ', elementos_em_comum_sem_repeticao)
+```
+Resolução utilizando conjuntos:
+```py
+a, b = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+c = set(a).intersection(set(b))
+print('Elementos em comum sem repetição: ', list(c))
+```
+
+```py
+
+```
+
+```py
+
+```
+
+```py
+
+```
+
 
 <div id="parte3"></div>
 
