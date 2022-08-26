@@ -361,7 +361,26 @@ class Lampada(object):
 ```
 
 ## Exercício 11
+Escreva um programa que leia do teclado uma sequência de número separados por vírgula (e.g. 2,4,5,6,1,6) e
+imprime a soma de todos eles.
+
 ```py
+on = True
+while True:
+    try:
+        numero = input("Digite os numeros que deseja somar, separados por virgula: ")
+        print('Numeros digitados: ', numero) #print(type(numero)) #string
+        lista = numero.split(',')
+        lista_numeros = []
+        for el in lista:
+            lista_numeros.append(float(el) )   
+        print('Lista criada: ', lista_numeros)
+        print('Soma: ', sum(lista_numeros))
+        on = False
+        break
+    except ValueError:
+        print('Valor informado é inválido. Não foi possível realizar a soma. Tente novamente.')
+        on = True
 ```
 ## Exercício 12
 ```py
