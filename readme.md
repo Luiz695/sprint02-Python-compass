@@ -1,16 +1,17 @@
 <h1>Sprint 02 - Python</h1>
 <p>Diretório referente a entrega das atividades.</p>
 <h3>Listas de exercicios</h3>
-<a href="\lista-de-exercicios\lista-01-01\Lista_01-Parte_01.ipynb">Lista 01 - Parte 01</a>
-<a href="\lista-de-exercicios\lista-01-02\Lista_01-Parte_02.ipynb">Lista 01 - Parte 02</a>
-<a href="\lista-de-exercicios\lista-02\Lista_02.ipnb">Lista 02</a>
+<a href="\lista-de-exercicios\lista-01-01\Lista_01-Parte_01.ipynb">Lista 01 - Parte 01</a></br>
+<a href="\lista-de-exercicios\lista-01-02\Lista_01-Parte_02.ipynb">Lista 01 - Parte 02</a></br>
+<a href="\lista-de-exercicios\lista-02\Lista_02.ipnb">Lista 02 - Complementares</a>
+</br>
 </br>
 <h3>Diretório de estudos:</h3>
-<a href="https://github.com/annekarolinefc/python">Diretório de Python</a>
+<a href="https://github.com/annekarolinefc/python">Diretório de Python</a></br>
 </br>
 <h3>Sumário</h3>
-<a href=#parte1>Exercícios - Lista 01 – Parte 1</a>
-<a href=#parte3>Exercícios - Lista 01 – Parte 2</a>
+<a href=#parte1>Exercícios - Lista 01 – Parte 1</a></br>
+<a href=#parte3>Exercícios - Lista 01 – Parte 2</a></br>
 <a href=#parte2>Exercícios - Lista 02</a>
 </br>
 </br>
@@ -154,6 +155,8 @@ a, b = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1
 c = set(a).intersection(set(b))
 print('Elementos em comum sem repetição: ', list(c))
 ```
+<br>
+
 ## Exercício 2
 Dada a seguinte lista:
 a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
@@ -175,6 +178,8 @@ Resolução utilizando List Comprehesion
 a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 [x for x in a if x % 2 !=0 ]
 ```
+<br>
+
 ## Exercício 3
 Peça para o usuário digitar uma palavra pelo teclado e determina se a palavra digitada é ou não um
 palíndromo. 
@@ -196,6 +201,8 @@ while True:
         print("Erro na aplicação. A aplicação será finalizada.")
         break
 ```
+<br>
+
 ## Exercício 04
 Dada as listas a seguir:
 primeirosNomes = ['Joao', 'Douglas', 'Lucas', 'José']
@@ -218,6 +225,7 @@ primeirosNomes, sobrenomes, idades = ['Joao', 'Douglas', 'Lucas', 'José'], ['So
 for primeirosNomes, sobrenomes, idades in zip(primeirosNomes, sobrenomes, idades):
     print(f'{primeirosNomes} {sobrenomes} está com {idades} anos.')
 ```
+<br>
 
 ## Exercício 05
 Escreva uma função que recebe uma lista e retorna uma nova lista sem elementos duplicados. Utilize um
@@ -247,6 +255,8 @@ class TestNovaLista(unittest.TestCase):
     
 unittest.main(argv=[''], verbosity=2, exit=False)
 ```
+<br>
+
 ## Exercício 06
 Escreva um programa que lê o conteúdo do arquivo texto arquivo_texto.txt e imprime o seu conteúdo.
 Dica: leia documentação da função open(...), link: https://docs.python.org/3/library/functions.html#open
@@ -257,6 +267,8 @@ for line in arquivo.readlines():
     print(line) 
 arquivo.close()
 ```
+<br>
+
 ## Exercício 07
 Leia o arquivo person.json, faça o parsing e imprima seu conteúdo.
 Dica: leia a documentação do pacote json, link: https://docs.python.org/3/library/json.html
@@ -277,6 +289,8 @@ with open('./person.json', 'r') as arquivoJson:
     print('Arquivo JSON: \n', arquivoJsonDumped)
     print(type(arquivoJsonDumped))
 ```
+<br>
+
 ## Exercício 08
 Implemente a função my_map(list, f) que recebe uma lista como primeiro argumento e uma função como segundo argumento. Esta função aplica a função recebida para cada elemento da lista recebida retorna o resultado em uma nova lista. Teste sua função para saber se está ok
 ```py
@@ -313,6 +327,8 @@ class Testa_funcao_my_map(unittest.TestCase):
     
 unittest.main(argv=[''], verbosity=2, exit=False)
 ```
+<br>
+
 ## Exercício 09
 Escreva uma função que recebe um número variável de parâmetros não nomeados e um número variado de
 parâmetros nomeados e imprime o valor de cada parâmetro recebido.
@@ -326,6 +342,8 @@ def function(*args, **kwargs):
         
 function('1', 2, True, ['b', 'c'], 6.3, y=7.8, param1=10, param2='hello')
 ```
+<br>
+
 ## Exercício 10
 Implemente a classe Lampada. A classe Lâmpada recebe um booleano no seu construtor, True se a lâmpada
 estiver ligada, False caso esteja desligada. 
@@ -359,6 +377,7 @@ class Lampada(object):
     def esta_ligada(self):
        print(f'Status da Lâmpada: {self.status} \nLigada: {self.ligada} \n')
 ```
+<br>
 
 ## Exercício 11
 Escreva um programa que leia do teclado uma sequência de número separados por vírgula (e.g. 2,4,5,6,1,6) e
@@ -382,6 +401,8 @@ while True:
         print('Valor informado é inválido. Não foi possível realizar a soma. Tente novamente.')
         on = True
 ```
+<br>
+
 ## Exercício 12
 Escreve uma função que recebe como parâmetro uma lista e retorna 3 listas: a lista recebida dividida em 3
 partes iguais. Teste sua implementação
@@ -435,6 +456,8 @@ class Testa_funcao_Divide_Lista(unittest.TestCase):
     
 unittest.main(argv=[''], verbosity=2, exit=False)
 ```
+<br>
+
 ## Exercício 13
 Dado o dicionário a seguir:
 speed = {'jan':47, 'feb':52, 'march':47, 'April':44, 'May':52, 'June':53, 'july':54, 'Aug':44, 'Sept':54}
@@ -451,6 +474,7 @@ for key, value in speed.items():
         c.append(value)
 print('Lista: ', c)
 ```
+<br>
 
 ## Exercício 14
 Calcule o valor mínimo, valor máximo, valor médio e a mediana da lista gerada na célula abaixo:
@@ -481,6 +505,7 @@ print('Valor máximo: ', np.max(array))
 print('Valor médio: ', np.mean(array))
 print('Valor mediana: ', np.median(array))
 ```
+<br>
 
 ## Exercício 15
 Imprima a lista da célula abaixo de trás para frente.
@@ -495,13 +520,14 @@ a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 a.reverse()
 print(a)
 ```
-
+<br>
 
 <div id="parte3"></div>
 
 # Exercícios - Lista 02 - numPy
 
 ## Exercício 01
+Crie um array 5x5 com a sequência 1...25 (incluso) e faça a soma dos elementos da diagonal.
 ```py
 import numpy as np
 
@@ -521,27 +547,59 @@ soma_diagonal = np.trace(array)
 print('Array 5 x 5: \n', array, '\n Forma do array (linhas, colunas): ', array.shape, '\n')
 print('Soma dos elementos da diagonal: ', soma_diagonal)
 ```
+<br>
+
 ## Exercício 02
+Crie um array 5x5 com a sequência de números pares entre 0...50 (incluso) e faça as seguintes operações:
+• Soma das linhas
+• Soma das Colunas
+• Média dos elementos da última linha
+• Média dos elementos da última coluna
+
 ```py
+import numpy as np
+
+# NÃO É POSSÍVEL CONSIDERAR O 50 -> array = np.array(range(0, 51, 2))
+array = np.array(range(0, 50, 2)).reshape((5, 5))
+
+print('Array: \n', array, '\n')
+print('Soma das linhas: ', np.sum(new_array, axis=1))
+print('Soma das colunas: ', np.sum(new_array, axis=0))
+print("Média dos elementos da ultima linha: ", np.mean(new_array[4], axis=0))
+print("Média dos elementos da ultima coluna: ", np.mean(new_array[:,4]))
 ```
+<br>
+
 ## Exercício 03
 ```py
 ```
+<br>
+
 ## Exercício 04
 ```py
 ```
+<br>
+
 ## Exercício 05
 ```py
 ```
+<br>
+
 ## Exercício 06
 ```py
 ```
+<br>
+
 ## Exercício 07
 ```py
 ```
+<br>
+
 ## Exercício 08
 ```py
 ```
+<br>
+
 ## Exercício 09
 ```py
 ```
