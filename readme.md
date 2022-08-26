@@ -258,7 +258,24 @@ for line in arquivo.readlines():
 arquivo.close()
 ```
 ## Exercício 07
+Leia o arquivo person.json, faça o parsing e imprima seu conteúdo.
+Dica: leia a documentação do pacote json, link: https://docs.python.org/3/library/json.html
+
 ```py
+import json
+
+with open('./person.json', 'r') as arquivoJson:
+    #Parse
+    arquivoJson = json.load(arquivoJson)  #Metodo para realizar o parse do arquivo JSON - converte em dicionario
+    print('Parse do arquivo Json - tipo atual->dicionário: \n', arquivoJson, '\n')
+    print('Tipo de arquivo: \n', type(arquivoJson), '\n')
+    
+    print('Conteúdo do arquivo Json: \n', arquivoJson['person'], '\n')
+      
+    #JSON data em Python
+    arquivoJsonDumped = json.dumps(arquivoJson, indent=3, ensure_ascii=False) # converte para JSON - STRING
+    print('Arquivo JSON: \n', arquivoJsonDumped)
+    print(type(arquivoJsonDumped))
 ```
 ## Exercício 08
 ```py
