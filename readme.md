@@ -314,7 +314,17 @@ class Testa_funcao_my_map(unittest.TestCase):
 unittest.main(argv=[''], verbosity=2, exit=False)
 ```
 ## Exercício 09
+Escreva uma função que recebe um número variável de parâmetros não nomeados e um número variado de
+parâmetros nomeados e imprime o valor de cada parâmetro recebido.
+
 ```py
+def function(*args, **kwargs):
+    for item in args:
+        print('Parâmetro não nomeado: ', item)
+    for key, value in kwargs.items():
+        print('Parâmetro nomeado: ', key, value)
+        
+function('1', 2, True, ['b', 'c'], 6.3, y=7.8, param1=10, param2='hello')
 ```
 
 ```py
