@@ -696,13 +696,33 @@ print('Array Numpy: \n', array, '\n')
 print('Seleção de valores pares e valores > 8 do Array Numpy: \n', new_array, '\n')
 ```
 
+## Exercício 10
+Dado o array 2D abaixo, substitua os 5 menores valores por -1, seu código não deve conter nenhum tipo de loop (for / while):
+• a = np.random.randint(0, 50, (5, 5))
+```py
+import numpy as np 
 
+array = np.random.randint(0, 50, (5, 5))
+print('Array Numpy: \n', array, '\n')
+lista = array.ravel().tolist() #array.reshape(-1)
+print("Lista: \n", lista)
+lista_ordenada = sorted(lista)
+print("Lista ordenada: ", lista_ordenada, '\n')
+cinco_menores = lista_ordenada[:5] 
+print("Cinco menores: ", cinco_menores)
+#lista_ordenada[:5] = -1
+lista_ordenada[0] = -1
+lista_ordenada[1] = -1
+lista_ordenada[2] = -1
+lista_ordenada[3] = -1
+lista_ordenada[4] = -1
+print("Lista ordenada com valores substituidos: ", lista_ordenada, '\n')
+novo_array= np.array(lista_ordenada).reshape((5, 5))
+print('Resultado final: \n', novo_array)
+```
+</br>
+</br>
 
-
-
-
-
-
-
+# Exercícios - Lista 02 - Pandas
 <p>Devido ao formato dos arquivos, a lista 02 será apresentada através do documento abaixo:</p>
 <a href="\lista-de-exercicios\lista-02\Lista_02.ipnb">Lista 02</a>
