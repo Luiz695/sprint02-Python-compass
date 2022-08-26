@@ -571,7 +571,17 @@ print("Média dos elementos da ultima coluna: ", np.mean(new_array[:,4]))
 <br>
 
 ## Exercício 03
+Dado o array 2D abaixo, substitua o seu maior valor por 0.
+• np.random.normal(0, 3, size=(5, 5))
 ```py
+import numpy as np
+
+array = np.random.normal(0, 3, size=(5, 5))
+print('Array Numpy: \n', array, '\n')
+max_el = np.max(array)
+print('Maior elemento do array: \n', max_el, '\n')
+array[array == max_el] = 0
+print('Substituindo valores: \n', array )
 ```
 <br>
 
