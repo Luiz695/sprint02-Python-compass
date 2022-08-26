@@ -125,6 +125,12 @@ while True:
 # Exercícios - Lista 01  – Parte 2
 ## Exercício 1
 
+Dada duas listas como no exemplo abaixo:
+  a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+  b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+Escreve um programa que retorne o que as listas têm comum (sem repetições). O seu programa deve
+funcionar para listas de qualquer tamanho.
+
 Resolução utilizando listas:
 ```py
 a, b = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -149,6 +155,10 @@ c = set(a).intersection(set(b))
 print('Elementos em comum sem repetição: ', list(c))
 ```
 ## Exercício 2
+Dada a seguinte lista:
+a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+Faça um programa que gere uma nova lista contendo apenas números ímpares.
+
 Resolução utilizando iteração:
 ```py
 a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
@@ -166,8 +176,25 @@ a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 [x for x in a if x % 2 !=0 ]
 ```
 ## Exercício 3
-```py
+Peça para o usuário digitar uma palavra pelo teclado e determina se a palavra digitada é ou não um
+palíndromo. 
+Um palíndromo é uma palavra que permanece igual se lida de traz pra frente.
 
+Há diversas formas de implementação para obter se uma palavra é palíndromo ou não. Abaixo será apresentada uma das formas. As outras duas formas estão no arquivo Lista_01-Parte_02.
+```py
+on = True
+while True:
+    try:
+        palavra = input('Digite uma palavra: ').replace(' ','').lower()
+        if palavra == ''.join(reversed(palavra)):
+            print("A palavra digitada é um palíndromo.")
+        else:
+            print("A palavra digitada não é um palíndromo.")
+        on = False
+        break
+    except ValueError:
+        print("Erro na aplicação. A aplicação será finalizada.")
+        break
 ```
 
 
