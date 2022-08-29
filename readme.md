@@ -12,7 +12,8 @@
 <h3>Sumário</h3>
 <a href=#parte1>Exercícios - Lista 01 – Parte 1</a></br>
 <a href=#parte2>Exercícios - Lista 01 – Parte 2</a></br>
-<a href=#parte3>Exercícios - Lista 02</a>
+<a href=#parte3>Exercícios - Lista 02 - Numpy</a>
+<a href=#parte4>Exercícios - Lista 02 - Pandas</a>
 </br>
 </br>
 
@@ -765,6 +766,7 @@ print("Os 7 filmes mais frequentes")
 df_filmes_mais_frequentes = df_3.head(7)
 df_filmes_mais_frequentes
 ```
+<div id="parte4"></div>
 ## Exercício 2
 
 Exercício 2
