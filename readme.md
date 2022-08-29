@@ -3,7 +3,7 @@
 <h3>Listas de exercicios</h3>
 <a href="\lista-de-exercicios\lista-01-01\Lista_01-Parte_01.ipynb">Lista 01 - Parte 01</a></br>
 <a href="\lista-de-exercicios\lista-01-02\Lista_01-Parte_02.ipynb">Lista 01 - Parte 02</a></br>
-<a href="\lista-de-exercicios\lista-02\Lista_02.ipnb">Lista 02 - Complementares</a>
+<a href="\lista-de-exercicios\lista-02\Lista_02.ipynb">Lista 02 - Complementares</a>
 </br>
 </br>
 <h3>Diretório de estudos:</h3>
@@ -11,8 +11,8 @@
 </br>
 <h3>Sumário</h3>
 <a href=#parte1>Exercícios - Lista 01 – Parte 1</a></br>
-<a href=#parte3>Exercícios - Lista 01 – Parte 2</a></br>
-<a href=#parte2>Exercícios - Lista 02</a>
+<a href=#parte2>Exercícios - Lista 01 – Parte 2</a></br>
+<a href=#parte3>Exercícios - Lista 02</a>
 </br>
 </br>
 
