@@ -724,5 +724,141 @@ print('Resultado final: \n', novo_array)
 </br>
 
 # Exercícios - Lista 02 - Pandas
-<p>Devido ao formato dos arquivos, a lista 02 será apresentada através do documento abaixo:</p>
 <a href="\lista-de-exercicios\lista-02\Lista_02.ipnb">Lista 02</a>
+
+## Exercício 1
+Leia o arquivo actors.csv e faça os seguintes cálculos sobre o conjunto de dados utilizando Pandas
+
+
+• O ator/atriz com maior número de filmes e o respectivo número de filmes.
+```py
+df_2 = df[['Actor', 'Number of Movies', '#1 Movie']]
+max = df_2.max()
+df_filtro = df_2['Number of Movies']==maior_qtd_filmes
+df_ator = df_2[df_filtro]
+df_ator
+```
+
+• A média do número de filmes.
+```py
+df_mean_number_of_movies = df[['Number of Movies']]
+media = np.mean(df_mean_number_of_movies)
+serie_conferencia = pd.Series(data=media)
+df_media = df_mean_number_of_movies.mean()
+print('A média do número de filmes é:', serie_conferencia)
+```
+• O ator/atriz com a maior média por filme.
+```py
+df_actor_average = df[['Actor', 'Average per Movie']]
+max_average = df['Average per Movie'].max()
+df_filtro = df_actor_average['Average per Movie']==max_average
+df_autores = df_actor_average[df_filtro]
+df_autores
+```
+• O nome do(s) filme(s) mais frequente(s) e sua respectiva frequência.
+Exibindo os 7 filmes mais frequentes e sua frequência:
+```py
+df_filmes = df[['#1 Movie']]
+df_2 = df_filmes.sort_values(by='#1 Movie', ascending=False)
+df_3 = df_2.value_counts()
+print("Os 7 filmes mais frequentes")
+df_filmes_mais_frequentes = df_3.head(7)
+df_filmes_mais_frequentes
+```
+## Exercício 2
+
+Exercício 2
+Leia o arquivo csv googleplaystore.csv e realize as seguintes atividades sobre o dataset utilizando Pandas:
+• Faça um gráfico de barras contendo os top 5 apps por número de instalação.
+```py
+# df['Installs'] está como objeto. NECESSÁRIO transformar em float.
+#print("Tipo de dados da Coluna de Número de Instalações: \n", df['Installs'].dtype)
+df['Installs'] = df['Installs'].apply(lambda x: str(x).replace(',', ''))
+df['Installs'] = df['Installs'].astype(float)
+
+#Criação do DataFrame utilizado
+df_apps_instalações = df[["App","Installs"]]
+
+#print("Relação de aplicativos e número de instalações: \n", df_apps_instalações)
+df_apps_instalações_agrupados = df_apps_instalações.groupby('App').sum()
+df_apps_instalações_agrupados
+
+#Ordenando por número de instalações
+top_5_apps = df_apps_instalações_agrupados.nlargest(5, columns="Installs").head(5)
+print("Os TOP 5 apps por número de instalação são: \n")
+top_5_apps
+```
+Plotando o gráfico:
+```py
+import matplotlib.pyplot as plt 
+
+top_5_apps.plot.bar(colormap='Accent',title='Top 5 aplicativos', ylabel='Quantidade de Instalações')
+```
+
+![image](/lista-de-exercicios//lista-02/top_5_app.png)
+
+
+• Faça um gráfico de pizza (pie chart) mostrando as categorias de apps existentes no dataset de acordo com a frequência em que elas aparecem.
+Conforme o código abaixo, há somente UMA categoria de app no dataset.
+```py
+# Contar numero de categorias
+categorias_dos_apps = df[['Category']]
+# Contando 
+contagem = categorias_dos_apps.value_counts()
+categoria_de_apps_group = categorias_dos_apps.groupby(['Category']).count()
+categoria_de_apps_group
+```
+Essa categoria, foi separada em gêneros. Portanto, as categorias dentro do gênero Game são:
+```py
+# Contar numero de categorias
+genero_dos_apps = df[['Genres']].replace(',', '')
+
+# Contando 
+contagem = genero_dos_apps.value_counts()
+contagem = contagem.to_frame()
+contagem
+```
+O gráfico abaixo, representa essas categorias:
+![image](/lista-de-exercicios/lista-02/categoria_de_generos_do_app.png)
+• Mostre qual o app mais caro existente no dataset.
+```py
+#Transformando o tipo de dado da coluna de preço e removendo strings indesejadas
+print(df['Price'].dtype)
+df['Price'] = df['Price'].apply(lambda x: str(x).replace(',', '').strip('$'))
+df['Price'] = df['Price'].astype(float)
+print(df['Price'].dtype)
+#O critério utilizado para a resolução é o Price - #preco_mais_caro = max(df['Price'])
+preco_mais_caro=pd.to_numeric(df['Price'])
+#Obtendo o index do app mais caro
+app_caro = preco_mais_caro.idxmax()
+# Criando um dataframe para o app mais caro
+df_do_app = df.loc[app_caro].to_frame()
+df_do_app
+```
+• Mostre quantos apps são classificados como “Mature 17+”.
+Os app classificados como "Mature 17+" são obtidos a partir de:
+```py
+df_resolucao = df[['App', 'Content Rating']]
+classificados = df_resolucao[df_resolucao['Content Rating']=='Mature 17+'] #classificados_2 = df_resolucao.loc[df_resolucao['Content Rating']=='Mature 17+']
+quantidade_app_classificado = classificados.groupby('Content Rating').value_counts()
+classificados
+```
+É um total de 63 aplicativos:
+```py
+df_resolucao = df_resolucao.drop_duplicates('App')
+classificacao = df[['Content Rating']].value_counts().loc['Mature 17+']
+classificacao
+```
+• Mostre o top 10 apps por número de reviews bem como o respectivo número de reviews. Ordene a lista de forma decrescente por número de reviews.
+```py
+df_resolucao = df[['App','Reviews']]
+df_resolucao_2 = df_resolucao.sort_values(by='Reviews', ascending=False )
+df_resolucao_3 = df_resolucao_2.groupby('App').sum()
+df_resolucao_3 = df_resolucao_3.sort_values(by='Reviews', ascending=False )
+df_resolucao_3 = df_resolucao_3.head(10)
+```
+Plotando o gráfico:
+![image](/lista-de-exercicios/lista-02/top_10_app_por_n%C3%BAmero_de_reviews.png)
+```py
+df_resolucao_3.plot.pie(title = "Categoria dos Aplicativos", figsize=(8, 8), autopct='%1.1f%%', subplots = True, legend = True)
+```
